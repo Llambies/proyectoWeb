@@ -18,7 +18,7 @@
     <div class="cuerpo">
 
         <header>
-            <img src="./imgs/logo_u15.svg" alt="">
+            <img src="./imgs/logo_u15.svg" alt="Logo Empresarial">
 
             <p class="Boton_sesion" onclick="iniciarModal()"><a href="#">Iniciar sesión</a></p>
 
@@ -39,41 +39,45 @@
 
         <section id="fondoModal">
                 <div class="contenidoModal">
-                <form action="./comprobar-login.php" class="" method="POST"> <!--Formulario dividido en filas-->
-                    <div> <!--  Esta es la primera-->
-                        <input type="text" name="usuario" id="" placeholder="Usuario" class="inputDato" required>
-                    </div>
-                    <?php 
-                    
-                    if (isset($_GET['loginInvalido'])) {
+                    <h2>Inicio de sesión</h2>
+
+                    <form action="./comprobar-login.php" class="" method="POST"> <!--Formulario dividido en filas-->
+                        <div class="inputConLogo"> <!--  Esta es la primera-->
+                            <img src="./imgs/user.svg" alt="Logo Usuario" height="35px" width="35px">
+                            <input type="text" name="usuario" placeholder="Usuario" class="inputDato" required>
+                        </div>
+                        <?php 
+                        if (isset($_GET['loginInvalido'])) {
                         $parametro=$_GET['loginInvalido'];
                         if ($parametro == true) {
                     
 
-                            echo '<div style="margin-top:-25px;">
+                            echo '<div style="margin-top:-12px;font-weight: bold;">
                                 <p style="color:red">Usuario o contraseña inválidos</p>
                         
                                 </div>';}
                         }
                     
-                    ?>
-                    <div><!--  Esta es la segunda-->
+                        ?>
+                        <div class="inputConLogo"><!--  Esta es la segunda-->
+                        <img src="./imgs/lock.svg" alt="Logo Usuario" height="35px" width="35px">
                         <input type="password" name="password" id="" placeholder="Contraseña" class="inputDato" required>
-                    </div>
-                    <div id="botonesFormulario"><!--  Esta es la tercera-->
-                        <a class="boton_rojo" onclick="ocultarModal()">Cancelar</a>
+                        </div>
+                        <div id="botonesFormulario"><!--  Esta es la tercera-->
+                            <a class="boton_rojo" onclick="ocultarModal()">Cancelar</a>
                         
-                        <input type="submit"name="" id="botonEnviar" class="botonEnviar">
+                            <input type="submit"name="" id="botonEnviar" class="botonEnviar">
                         
                       
                         
-                    </div>
-                    <div class="contacto">
-                        <p>Si no recuerdas tus datos contáctanos: </p>
-                        <p>902 222 345</p>
-                    </div>
+                        </div>
+                        
         
-                </form>
+                    </form>
+                    <div class="contacto">
+                            <p style="color:blue"><a href="">¿Has olvidado tu contraseña?</a></p>
+                        
+                        </div>
             </div>
             </section>
 
@@ -93,24 +97,9 @@
 
          <!-- Parte Marc Alandete -->
         
+
+        <script src="./js/modal.js"></script>
             <script>
-                
-                function iniciarModal() {
-                    document.getElementById('fondoModal').style.display = "flex";
-                }
-        
-                function ocultarModal() {
-                    document.getElementById('fondoModal').style.display = "none";
-        
-                }
-                var modal = document.getElementById('fondoModal');
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-                
-               
                 <?php 
                     
                     if (isset($_GET['loginInvalido'])) {
@@ -120,7 +109,7 @@
 
                             echo 'iniciarModal();';}
                         }
-                    
+                        unset($_GET['loginInvalido']);
                     ?>
                 
         
@@ -142,3 +131,4 @@
 </body>
 
 </html>
+
