@@ -51,10 +51,9 @@
                         if ($parametro == true) {
                     
 
-                            echo '<div style="margin-top:-12px;font-weight: bold;">
-                                <p style="color:red">Usuario o contraseña inválidos</p>
-                        
-                                </div>';}
+                            echo '  <div style="margin-top:-10px;font-weight: bold; margin-left: 7px; margin-bottom: -15px;">
+                                        <p style="color:red">Usuario o contraseña inválidos</p>
+                                    </div>';}
                         }
                     
                         ?>
