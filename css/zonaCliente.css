@@ -1,0 +1,40 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+
+}
+.contenedor{
+    width:100%;
+    background-color: white;
+
+
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.logoEmpresa img{
+    height: 70px;
+}
+
+.navegador ul{
+    display: flex
+}
+
+.navegador ul li{
+    display: block;
+    background-color: #4DAA50;
+    padding:0.8rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.3rem;
+    min-width: 80px;
+    box-shadow: 1px 1px 0px green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    
+
+}

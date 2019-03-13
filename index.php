@@ -6,8 +6,8 @@
     <title>Landing page</title>
     <!--<link rel="stylesheet" href="./reset.css">-->
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./marcAlandete.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/modalLogin.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
     </style>
@@ -66,6 +66,7 @@
                             <input type="submit"name="" id="botonEnviar" class="botonEnviar">
                         </div>
                     </form>
+                    <hr>
                     <div class="contacto">
                             <p style="color:blue"><a href="">¿Has olvidado tu contraseña?</a></p>    
                     </div>

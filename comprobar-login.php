@@ -33,7 +33,7 @@ session_start();
 			*/
 			//SESION ADMIN
             if (password_verify($_POST['password'], $hash) && $row['Rol'] == 'admin') {	
-				
+				session_start();
 				$_SESSION['loggedin'] = true;
 				$_SESSION['name'] = $row['Name'];
 				$_SESSION['start'] = time();
